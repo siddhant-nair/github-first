@@ -1,0 +1,6 @@
+3 die have been rolled
+the sum of the three die must be printed
+user input is taken regarding the next roll
+user guesses if the next roll will have a higher or lower sum 
+if the user guesses right output 1 will be chosen
+if the user guesses weong output 2 will be chosen
