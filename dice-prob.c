@@ -8,40 +8,43 @@ void main()
     system("CLS");
     
     int d1, d2, d3;
-    int sum;
+    int sum = 0;
     int a = 1;
-    int b = 0;
     char ans[1];
     
-    while(a==1)
+    do
     {
         int sumold = sum;
-        for(int i=0; i<8; i++)
-    {
         d1 = (rand()%6 + 1);
         d2 = (rand()%6 + 1);
         d3 = (rand()%6 + 1);
         sum = d1 + d2 + d3;
 
-        printf("Sum of the results of the die are %d \n", sum);
-        printf("Enter 'H' or 'L' \n");
-        gets(ans);
-        b++;
-        break;
-    }
-        if (b==1)
+        if(a==1)
+        {
+            printf("Sum of the results of the die are %d \n", sum);
+        }
+
+        a++;
+        if (a==2)
         {
             continue;
         }
+        
+        printf("Enter 'H' or 'L' \n");
+        gets(ans);
+        
+        printf("Sum of the results of the die are %d \n", sum);
 
-        if((ans=="h" && sumold<sum) || (ans=="l" && sumold>sum))
+        if((ans[0]=='h' && sumold<sum) || (ans[0]=='l' && sumold>sum))
         {
             printf("GREAT JOB BOIIIIIIIIII \n");
         }else
         {
             printf("YOU LOST BOIIIIIIII \n");
         }
-        }
+        
+        }while(a>0);
     
     
 }
